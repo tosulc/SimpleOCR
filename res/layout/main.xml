@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+     <EditText
+        android:id="@+id/for_focus"
+        android:layout_width="0dp"
+        android:layout_height="0dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_ocr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="91dp"
+        android:text="GO OCR!" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Minutes: " />
+
+    <EditText
+        android:id="@+id/et_minutes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberSigned" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/et_seconds"
+        android:text="Seconds: " />
+
+    <EditText
+        android:id="@+id/et_seconds"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberSigned" />
+    
+    <TextView 
+        android:id="@+id/tv_threshold_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_threshold_value"
+        android:layout_alignBottom="@+id/tv_threshold_value"
+        android:text="Threshold value:"
+        />
+    
+    <TextView 
+        android:id="@+id/tv_threshold_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_pick_threshold"
+        android:layout_marginLeft="5dp"
+        android:layout_alignLeft="@+id/btn_pick_threshold"
+        />
+
+    <Button
+        android:id="@+id/btn_pick_threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_ocr"
+        android:layout_alignBottom="@+id/btn_ocr"
+        android:layout_alignParentRight="true"
+        android:text="Threshold" />
+
+</RelativeLayout>

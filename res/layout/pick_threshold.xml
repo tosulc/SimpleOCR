@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Take picture!" />
+    
+    <EditText 
+        android:id="@+id/et_threshold_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/button_take_picture"
+        android:layout_below="@+id/button_take_picture"
+        android:inputType="numberSigned"
+        android:focusable="true">
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/button_take_picture"
+        android:layout_below="@+id/et_threshold_value"
+        android:text="Reset" />
+    
+    <Button
+        android:id="@+id/button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/button_take_picture"
+	android:layout_below="@+id/button_reset"
+        android:text="Set Threshold" />
+
+    <ImageView
+        android:id="@+id/iv_picture_taken_show"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/button_take_picture"
+        android:layout_height="fill_parent" 
+        
+        />
+
+</RelativeLayout>
